@@ -58,5 +58,10 @@ module Dataway
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
-  end
+ 
+    # If you are deploying Rails 3.1 on Heroku, set to force application to not access the DB
+    # or load models when precompiling assets.
+    config.assets.initialize_on_precompile = false
+
+    end
 end

@@ -1,5 +1,6 @@
 Dataway::Application.routes.draw do
   resources :revenue_models
+  root :to => "home#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
