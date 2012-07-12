@@ -1,4 +1,6 @@
 Dataway::Application.routes.draw do
+  resources :revenue_models
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Ent:</b>
+  <%= @revenue_model.ent_id %>
+</p>
+
+<p>
+  <b>Company:</b>
+  <%= @revenue_model.company %>
+</p>
+
+<p>
+  <b>Revenue mill:</b>
+  <%= @revenue_model.revenue_mill %>
+</p>
+
+<p>
+  <b>Source:</b>
+  <%= @revenue_model.source %>
+</p>
+
+<p>
+  <b>Updated at:</b>
+  <%= @revenue_model.updated_at %>
+</p>
+
+<p>
+  <b>Updated by:</b>
+  <%= @revenue_model.updated_by %>
+</p>
+
+<p>
+  <b>Is verified:</b>
+  <%= @revenue_model.is_verified %>
+</p>
+
+
+<%= link_to 'Edit', edit_revenue_model_path(@revenue_model) %> |
+<%= link_to 'Back', revenue_models_path %>

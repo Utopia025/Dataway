@@ -1,0 +1,35 @@
+<h1>Listing revenue_models</h1>
+
+<table>
+  <tr>
+    <th>Ent</th>
+    <th>Company</th>
+    <th>Revenue mill</th>
+    <th>Source</th>
+    <th>Updated at</th>
+    <th>Updated by</th>
+    <th>Is verified</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @revenue_models.each do |revenue_model| %>
+  <tr>
+    <td><%= revenue_model.ent_id %></td>
+    <td><%= revenue_model.company %></td>
+    <td><%= revenue_model.revenue_mill %></td>
+    <td><%= revenue_model.source %></td>
+    <td><%= revenue_model.updated_at %></td>
+    <td><%= revenue_model.updated_by %></td>
+    <td><%= revenue_model.is_verified %></td>
+    <td><%= link_to 'Show', revenue_model %></td>
+    <td><%= link_to 'Edit', edit_revenue_model_path(revenue_model) %></td>
+    <td><%= link_to 'Destroy', revenue_model, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Revenue model', new_revenue_model_path %>

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  ent_id: MyString
+  company: MyString
+  revenue_mill: 9.99
+  source: MyString
+  updated_at: 2012-07-12 10:34:15
+  updated_by: MyString
+  is_verified: false
+
+two:
+  ent_id: MyString
+  company: MyString
+  revenue_mill: 9.99
+  source: MyString
+  updated_at: 2012-07-12 10:34:15
+  updated_by: MyString
+  is_verified: false

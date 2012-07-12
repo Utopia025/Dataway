@@ -1,0 +1,45 @@
+<%= form_for(@revenue_model) do |f| %>
+  <% if @revenue_model.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@revenue_model.errors.count, "error") %> prohibited this revenue_model from being saved:</h2>
+
+      <ul>
+      <% @revenue_model.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ent_id %><br />
+    <%= f.text_field :ent_id %>
+  </div>
+  <div class="field">
+    <%= f.label :company %><br />
+    <%= f.text_field :company %>
+  </div>
+  <div class="field">
+    <%= f.label :revenue_mill %><br />
+    <%= f.text_field :revenue_mill %>
+  </div>
+  <div class="field">
+    <%= f.label :source %><br />
+    <%= f.text_field :source %>
+  </div>
+  <div class="field">
+    <%= f.label :updated_at %><br />
+    <%= f.datetime_select :updated_at %>
+  </div>
+  <div class="field">
+    <%= f.label :updated_by %><br />
+    <%= f.text_field :updated_by %>
+  </div>
+  <div class="field">
+    <%= f.label :is_verified %><br />
+    <%= f.check_box :is_verified %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
