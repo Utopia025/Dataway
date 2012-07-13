@@ -1,0 +1,271 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+ *    v2.0 | 20110126
+ *       License: none (public domain)
+ *       */
+/*
+ * 	-COLOR CODES_
+ * 	*Matte Black     - #333333
+ * 	*White		 - #FFF
+ * 	*RPX Blue	 - #2780C2
+ * 	*Gray 		 - #
+ */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	 margin: 0;
+	 padding: 0;
+	 border: 0;
+	 font-size: 100%;
+	 font: inherit;
+	 vertical-align: baseline;
+      }
+      /* HTML5 display-role reset for older browsers */
+      article, aside, details, figcaption, figure, 
+      footer, header, hgroup, menu, nav, section {
+	       display: block;
+      }body {
+	        line-height: 1;
+      }	ol, ul {
+		list-style: none;
+      } blockquote, q {
+  		quotes: none;
+      } blockquote:before, blockquote:after,
+		q:before, q:after {
+		content: '';
+		content: none;
+	    }
+	    table {
+		     border-collapse: collapse;
+		      border-spacing: 0;
+	      }
+
+/*~~~~~~~~~~~~~~~~~~~~HEADER~~~~~~~~~~~~~~~~~~~~~~*/
+#header {
+     	width: 100%;
+	background-color: #333333;
+	height: 50px;
+}
+ul#header_bar li {
+	float : left;
+	display : inline;
+	list-style-type : none;
+	padding : 15px 10px 0 10px;
+	margin-top : 1px;	
+}
+.header-button {
+	padding : 10px 20px;
+	display : inline;
+	background : #717171;
+	border : none;
+	color : #B6B6B6;
+	cursor : pointer;
+	font-weight : bold;
+	border-radius : 5px;
+	-moz-border-radius : 5px;
+	-webkit-border-radius : 5px;
+	text-shadow : 1px 1px #666;
+	text-decoration : none;
+}
+.header-button:hover {
+	background                                      : #2780C2;
+	color                                           : #FFF;
+}
+ul#header_links li {
+	float						: right;
+	display						: inline;
+	padding						: 15px 5px 0 5px;
+}
+ul#header_links li a {
+	font-style					: none;
+	color						: #FFF;	
+	text-decoration				: none;
+}
+ul#header_links li a:hover {
+	text-decoration				: underline;
+	background                              : #333333;
+}
+.active {
+	background					: #2780C2;
+	color						: #FFF;	
+}
+a:hover {
+	background					: #2780C2;
+	color						: #FFF;			
+}
+
+/*~~~~~~~~~~~~~~~~~~~~BODY~~~~~~~~~~~~~~~~~~~~~~*/
+#body1 {
+	width						: 700px;
+	margin						: 0 auto;	
+}
+a: visited {
+	color						: #FFF;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~TABS~~~~~~~~~~~~~~~~~~~~~~*/
+#tabs_container {
+	margin-top					: 50px;
+	margin-bottom				: 10px;
+}
+#graph_container {
+	width						: 415px;
+	margin						: 0 auto;
+	background					: #333333; 
+}
+#tabs {
+	list-style					: none;
+	padding						: 0 0 0 20px; 
+	margin						: 0;
+}
+#tabs li {
+	float						: left;
+	border						: 2px solid #333333;
+	border-top-left-radius		: 10px;
+	border-top-right-radius		: 10px;	
+	margin						: 0 5px 0 0;
+}
+#tabs li a {
+	padding						: 3px 2em;
+	border-top-left-radius: 7px; /*Adjusting padding for the a element, rather than for the li elements,	*/
+ 	border-top-right-radius: 7px;/*has the advantage of making the whole width of the tab clickable		*/
+	background					: #717171;
+	text-decoration				: none;
+	color						: #B6B6B6;
+	font-weight					: 900;
+	text-align					: center;
+	vertical-align				: middle;
+}
+#tabs li a:hover {
+	background					: #2780C2;
+	color						: #FFF;
+	border-top-left-radius		: 7px;
+	border-top-right-radius		: 7px;
+}
+#tabs li.active a {
+	padding						: 5px 2em;
+	border-top-left-radius		: 7px;
+  	border-top-right-radius		: 7px;
+	position					: relative;
+	top							: 0.2em; 
+	background					: #2780C2;
+	color						: #FFF;
+}
+#tabs li.active a:hover {
+	position					: relative;
+	top							: 0.2em; 
+	background					: #2780C2;
+	color						: #FFF;
+}
+#tabs_content_container {
+	width						: 700px;
+	min-height: 260px; /* for modern browsers */
+	height: auto ; /* !importantfor modern browsers */
+	height						: 260px; /* for IE5.x and IE6 */
+        border 						: 4px solid;
+   	border-color				: #333333;
+	background					: #2780C2; 	
+	clear						: both;
+	margin-bottom				: 100px;
+}
+.tab_content {
+	display: none;
+}
+.tab_content_border {
+	width						: 660px;
+	min-height					: 230px; /* for modern browsers */
+	height						: auto ; /* !importantfor modern browsers */
+	height						: 230px; /* for IE5.x and IE6 */
+	background-color			: #E9E9E9;
+	margin						: 10px 10px 10px 10px;	
+	padding 					: 1px 10px 10px 10px;
+}
+.search-table-headers {
+	margin-top					: 5px;
+}
+.search-table {
+	min-height					: 140px; /* for modern browsers */
+	height						: auto ; /* !importantfor modern browsers */
+	height						: 140px; /* for IE5.x and IE6 */
+}
+.search-table td {
+	padding						: 7px 7px 0 0;
+	vertical-align				: middle;	
+}
+.search-div {
+	min-height					: 60px; /* for modern browsers */
+	height						: auto ; /* !importantfor modern browsers */
+	height						: 60px; /* for IE5.x and IE6 */
+}
+.search-button {
+	width						: 140px;
+	height						: 30px;
+	float						: right;
+	font-weight					: 900;
+	margin-top					: 30px;
+}
+#company-name {
+	width: 98%;
+	text-align: center;	
+	}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~RESULTS~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.results_container {
+	min-width					: 1494px;
+	max-height: 600px;
+	overflow: scroll;
+	border						: 4px solid;
+	border-color				: #333333;
+	margin-top					: 50px;	
+}
+.tbl_results_display {
+	width						: 100%;
+	min-width					: 1000px;
+	min-height					: 500px; /* for modern browsers */
+	height						: auto ; /* !importantfor modern browsers */
+	height						: 500px; /* for IE5.x and IE6 */
+	background					: #E9E9E9; 	
+	padding						: 10px;
+	border						: 10px solid #2780C2;
+	margin						: 10px solid;
+	overflow					: scroll;
+}
+
+/**/
+#tbl-row-header {
+	background 					: #333333;
+	color 						: #fff;
+	font-weight					: 900;
+	text-align					: center;
+	height 						: 30px;
+	vertical-align				: middle;
+}
+#tbl-row-header td {
+	font-size 					: 14px;	
+}
+#tbl_results_display tr {
+	min-height: 30px;
+	height: 30px;
+}
+.tbl_results_display td {
+	font-size					: 12px;
+	padding						: 3px;
+	vertical-align				: middle;
+	border						: 1px solid #CCC;
+	min-width					: 80px;
+	min-height					: 30px;
+}
+

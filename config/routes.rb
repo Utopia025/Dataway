@@ -1,4 +1,6 @@
 Dataway::Application.routes.draw do
+  devise_for :users
+
   resources :revenue_models
   root :to => "home#index"
 

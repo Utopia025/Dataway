@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Dataway</title>
+  <title><%= full_title(yield(:title)) %></title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -10,7 +10,21 @@
    <!-- Adds the devise authentication notifications to the layout -->  
    <p class="notice"><%= notice %></p>
    <p class="alert"><%= alert %></p>
-<%= yield %>
+   <div id="header">
+     <ul id="header_bar">
+       	<li><a href="#" class="header-button active" id="data_portal"> Data Portal </a></li>
+        <li><a href="#" class="header-button" id="client_portal"> Client Portal </a></li>
+        <li><a href="#" class="header-button" id="revenue_model">Revenue Model</a></li>
+        <li><a href="#" class="header-button" id="account"> Account </a></li>
+     </ul>
+     <ul id="header_links">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Feedback</a></li>
+        <li><a href="#">Report a Bug</a></li>
+     </ul>
+   </div>	
+   
+   <%= yield %>
 
 </body>
 </html>
