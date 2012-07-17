@@ -1,4 +1,7 @@
 class RevenueModelsController < ApplicationController
+  # require devise login for all pages, minus except specifiers
+  before_filter :authenticate_user!, :except => [:index]
+      
   # GET /revenue_models
   # GET /revenue_models.json
   def index

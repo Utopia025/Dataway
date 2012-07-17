@@ -80,6 +80,9 @@ ul#header_bar li {
 	text-shadow : 1px 1px #666;
 	text-decoration : none;
 }
+.header-button:visited {
+	color: #B6B6B6;
+}
 .header-button:hover {
 	background                                      : #2780C2;
 	color                                           : #FFF;
@@ -102,18 +105,11 @@ ul#header_links li a:hover {
 	background					: #2780C2;
 	color						: #FFF;	
 }
-a:hover {
-	background					: #2780C2;
-	color						: #FFF;			
-}
 
 /*~~~~~~~~~~~~~~~~~~~~BODY~~~~~~~~~~~~~~~~~~~~~~*/
 #body1 {
 	width						: 700px;
 	margin						: 0 auto;	
-}
-a: visited {
-	color						: #FFF;
 }
 
 /*~~~~~~~~~~~~~~~~~~~~TABS~~~~~~~~~~~~~~~~~~~~~~*/

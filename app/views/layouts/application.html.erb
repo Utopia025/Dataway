@@ -12,7 +12,7 @@
    <p class="alert"><%= alert %></p>
    <div id="header">
      <ul id="header_bar">
-       	<li><a href="#" class="header-button" id="data_portal"> Data Portal </a></li>
+       	<li><a href="#" class="header-button" id="dma">DMA</a></li>
         <li><a href="#" class="header-button" id="client_portal"> Client Portal </a></li>
         <li><a href="#" class="header-button" id="revenue_model">Revenue Model</a></li>
         <li><a href="#" class="header-button" id="account"> Account </a></li>
@@ -23,8 +23,19 @@
         <li><a href="#">Report a Bug</a></li>
      </ul>
    </div>	
-   
-   <%= yield %>
+   <div class ="login-nav">
+	<% if user_signed_in? %>
+		Logged in as <strong><% current_user.email %></strong>.
+   		<% link_to 'Edit Profile', edit_user_registration_path %>
+		<% link_to 'Logout', destroy_user_session_path, method: :delete %>
+	<% else %>
+		<% link_to "Sign Up", new_user_registration_path %>
+		<% link_to "Login", new_user_session_path %>
+	<% end%>
+   </div>	
+	
+	
+	<%= yield %>
 
 </body>
 </html>
