@@ -1,0 +1,6 @@
+~~NOTES~~
+7.23.12
+	-Need to fix link error; every time a link clicked, adds to existing URL
+	  -->EX: clicking 'Revenue Model' button from Revenue Model page results in
+		'173.255.218.251:3000/revenue_models/revenue_models/new'
+
