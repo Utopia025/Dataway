@@ -26,14 +26,13 @@ a {
 	width			: 25em;
 	border			: 0;	
 	margin			: 0.5em;
-}
-#inner_table a:hover {
-	text-decoration		: underline;
-	background		: #2780C2;
-}
-#inner_table a:visited {
-	color			: #333333;
-
+	&:hover {
+		text-decoration		: underline;
+		background		: #2780C2;
+	}
+	&:visited {
+		color			: #333333;
+	}
 }
 .text_input {
 	width		 	: 98%;
