@@ -1,4 +1,4 @@
-<script type="text/javascript" src="jquery.js">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
 <script type="text/javascript">
 $j = jQuery.noConflict();
 
@@ -12,5 +12,4 @@ $j(document).ready(function() {
 });
 
 
-</script>
 </script>

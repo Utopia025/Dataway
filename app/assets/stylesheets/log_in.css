@@ -30,9 +30,10 @@ a {
 #inner_table a:hover {
 	text-decoration		: underline;
 	background		: #2780C2;
+	color			: #000000;
 }
 #inner_table a:visited {
-	color			: #333333;
+	color			: #000000;
 
 }
 .text_input {
