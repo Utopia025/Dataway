@@ -26,12 +26,12 @@ a {
 	width			: 25em;
 	border			: 0;	
 	margin			: 0.5em;
-	&:hover {
+	& a:hover {
 		text-decoration		: underline;
 		background		: #2780C2;
 	}
-	&:visited {
-		color			: #333333;
+	& a:visited {
+		color			: #000;
 	}
 }
 .text_input {
