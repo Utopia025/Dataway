@@ -1,5 +1,9 @@
 @charset "utf-8";
 /* CSS Document */
+$rpxBlue: #2780C2;
+$matteBlack: #333333;
+
+
 body {
 	font: Calibri, Arial, Helvetica, sans-serif;
 }
@@ -18,9 +22,9 @@ a {
 	padding-bottom		: 1em;
 	border-style		: solid;
 	border-width		: 1em;
-	border-color		: #333333;
+	border-color		: $matteBlack;
 	border-radius		: 1em; -moz-border-radius: 1em;
-	background-color	: #2780C2;
+	background-color	: $rpxBlue;
 }
 #inner_table {
 	width			: 25em;
@@ -28,7 +32,7 @@ a {
 	margin			: 0.5em;
 	& a:hover {
 		text-decoration		: underline;
-		background		: #2780C2;
+		background		: $rpxBlue;
 	}
 	& a:visited {
 		color			: #000;

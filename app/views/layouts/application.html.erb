@@ -3,12 +3,13 @@
 <head>
   <title><%= full_title(yield(:title)) %></title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "layout", "application" %>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <%= javascript_include_tag "layout", "application"  %>
   <%= csrf_meta_tags %>
 </head>
 <body>
    <!-- Adds the devise authentication notifications to the layout -->  
-     <div id="header">
+   <div id="header">
      <ul id="header_bar">
        	<li><a href="#" class="header-button" id="dma">DMA</a></li>
         <li><a href="#" class="header-button" id="client_portal"> Client Portal </a></li>
