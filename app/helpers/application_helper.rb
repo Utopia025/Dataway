@@ -8,6 +8,19 @@ module ApplicationHelper
 		end
 	end
 	
+	def on_button(button_id)
+		if button_id.empty?
+			""
+		else
+			"<script>
+				$(document).load(
+					$('.header-button').removeClass().addClass('header-button');
+			 		$(#{button_id}).addClass('active');)
+			 </script>"
+		end
+	end
+
+	
 	# Include Devise resource control in non-Devise controllers
 	def resource_name
     		:user

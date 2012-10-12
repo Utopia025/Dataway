@@ -7,7 +7,6 @@ gem 'rails', '3.2.6'
 
 gem 'sqlite3'
 
-
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -39,3 +38,10 @@ gem 'jquery-rails'
 
 # add authentication
 gem 'devise'
+
+# RPX core DB access gems
+# Must install libpq-dev gem--> 'sudo apt=get install libpq-dev'
+gem 'pg'
+gem 'core_models', :git=>'git@github.com:rpx/core_models.git', :branch => 'mi'
+gem "factory_girl_rails", "~>1.2.0"
+gem 'awesome_print'
