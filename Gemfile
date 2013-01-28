@@ -45,3 +45,9 @@ gem 'pg'
 gem 'core_models', :git=>'git@github.com:rpx/core_models.git', :branch => 'mi'
 gem "factory_girl_rails", "~>1.2.0"
 gem 'awesome_print'
+
+# Scraping gems
+require 'nokogiri'
+require 'open-uri'
+require 'spreadsheet'
+	
