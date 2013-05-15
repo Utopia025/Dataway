@@ -83,4 +83,31 @@ class RevenueModelsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  # UPLOAD create instance variable, call onto upload form, and route to parse_upload actoin
+  def upload
+	@uploaded_doc = { :workbook => RubyXL::Parser.new }  	
+#	@uploaded_io = params[:file]
+  end
+
+  # Parse the uploaded file
+  def parse_upload
+	@worksheet = (params[:uploaded_doc][:workbook])
+ 	@file_path = [Rails.root, 'public', 'upload', @worksheet.original_filename].join('/')
+	@worksheet_class = (params[:uploaded_doc][:workbook]).class
+	@worksheet_type = (params[:uploaded_doc][:workbook]).content_type
+	@worksheet_name = (params[:uploaded_doc][:workbook]).original_filename 
+	File.open(Rails.root.join('public', 'uploads', @worksheet.original_filename), 'r') do |file|
+		@worksheet_array << file.gets 
+	end
+=begin	@worksheet_array = RubyXL::Parser.parse(params[:uploaded_doc][:workbook]).worksheets[0].extract_data
+  	@worksheet = RubyXL::Parser.parse(Rails.root.join('public', 'uploads', (params[:uploaded_doc][:workbook]).original_filename , 'w'))#.worksheets[0].extract_data
+	File.open(Rails.root.join('public', 'uploads', @worksheet.original_filename), 'r') do |file|
+		@worksheet_array << file.gets 
+	end
+
+=end
+  end	  
+
+
 end

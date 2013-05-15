@@ -1,7 +1,16 @@
 Dataway::Application.routes.draw do
   devise_for :users
-
-  resources :revenue_models
+#  get 'revenue_models/upload'
+  match 'revenue_models/upload' => 'revenue_models#parse_upload', :via => :put
+  resources :revenue_models do
+	  # member routes require an ID, because it acts on a member; as opposed to  collection routes --> acts on a collection of objects 
+	  # preview is an example of a member route (acts on and displays a single object)  
+	  # Search is an example of a collection route,(acts on and displays a collection of objects)
+  	  get 'upload', :on => :collection
+	  
+	  #put 'parse_upload',:on => :collection
+	  # map.connect '/revenue_models/upload', :controller => 'revenue_models', :action => 'upload'
+  end
   root :to => "home#index"
 
   # The priority is based upon order of creation:

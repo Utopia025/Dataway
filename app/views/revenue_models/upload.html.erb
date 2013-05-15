@@ -1,0 +1,6 @@
+You are in the Upload view...
+
+<%= form_tag(revenue_models_upload_path, :method => "put", :multipart => true) do %>
+	<%= file_field(:uploaded_doc, :workbook) %>
+	<%= submit_tag("Upload File") %>     
+<% end %>  

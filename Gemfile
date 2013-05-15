@@ -21,6 +21,10 @@ end
 
 gem 'jquery-rails'
 
+group :development do
+  gem 'annotate', '2.5.0'
+end
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
@@ -47,7 +51,13 @@ gem "factory_girl_rails", "~>1.2.0"
 gem 'awesome_print'
 
 # Scraping gems
-require 'nokogiri'
-require 'open-uri'
-require 'spreadsheet'
-	
+gem 'nokogiri'
+# read in XLS/XLSX spreadsheets for multi uploads
+gem 'spreadsheet'
+gem 'archive-zip'
+gem 'rubyzip'
+gem 'rubyXL'
+
+# File Uploading gems
+# gem 'carrierwave'
+# gem 'rmagick'
